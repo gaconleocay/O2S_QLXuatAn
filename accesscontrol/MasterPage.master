@@ -1,0 +1,597 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="accesscontrol_MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="shortcut icon" href="../QLXuatAnLogo.png" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Kz-iWatchPro</title>
+	<meta name="description" content="Access Control, Kiểm soát vào ra" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+	<!-- bootstrap & fontawesome -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.css" />
+	<link rel="stylesheet" href="../components/font-awesome/css/font-awesome.css" />
+
+	<!-- page specific plugin styles -->
+    <link rel="stylesheet" href="../components/_mod/jquery-ui.custom/jquery-ui.custom.css" />
+	<link rel="stylesheet" href="../components/chosen/chosen.css" />
+	<link rel="stylesheet" href="../components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+	<link rel="stylesheet" href="../components/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+	<link rel="stylesheet" href="../components/bootstrap-daterangepicker/daterangepicker.css" />
+	<link rel="stylesheet" href="../components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" href="../components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" />
+    <link rel="stylesheet" href="../components/bootstrap-duallistbox/dist/bootstrap-duallistbox.css" />
+	<link rel="stylesheet" href="../components/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" />
+	<link rel="stylesheet" href="../components/select2/dist/css/select2.css" />
+    <link rel="stylesheet" href="../components/jquery-colorbox/example1/colorbox.css" />
+
+    <link rel="stylesheet" href="../components/treegrid-flexible/css/jquery.treegrid.css"/>
+
+    <link rel="stylesheet" href="../assets/css/datepicker.css" />
+	<link rel="stylesheet" href="../assets/css/colorpicker.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-editable.css" />
+
+	<!-- text fonts -->
+	<link rel="stylesheet" href="../assets/css/ace-fonts.css" />
+
+	<!-- ace styles -->
+	<link rel="stylesheet" href="../assets/css/ace.css" class="ace-main-stylesheet" />
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="../assets/css/ace-part2.css" class="ace-main-stylesheet" />
+	<![endif]-->
+	<link rel="stylesheet" href="../assets/css/ace-skins.css" />
+	<link rel="stylesheet" href="../assets/css/ace-rtl.css" />
+
+	<!--[if lte IE 9]>
+		<link rel="stylesheet" href="../assets/css/ace-ie.css" />
+	<![endif]-->
+
+	<!-- inline styles related to this page -->
+
+	<!-- ace settings handler -->
+	<script src="../assets/js/ace-extra.js"></script>
+
+	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+	<!--[if lte IE 8]>
+	<script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+	<script src="../components/respond/dest/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="no-skin">
+<!-- #section:basics/navbar.layout -->
+	<div id="navbar" class="navbar navbar-default">
+		<script type="text/javascript">
+		    try { ace.settings.check('navbar', 'fixed') } catch (e) { }
+		</script>
+
+		<div class="navbar-container" id="navbar-container">
+			<!-- #section:basics/sidebar.mobile.toggle -->
+			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+				<span class="sr-only">Toggle sidebar</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+			</button>
+
+			<!-- /section:basics/sidebar.mobile.toggle -->
+			<div class="navbar-header pull-left">
+				<!-- #section:basics/navbar.layout.brand -->
+				<a href="Default.aspx" class="navbar-brand">
+					<small>
+						<i class="fa fa-diamond"></i>
+						Kz-iWatchPro
+					</small>
+				</a>
+
+				<!-- /section:basics/navbar.layout.brand -->
+
+				<!-- #section:basics/navbar.toggle -->
+
+				<!-- /section:basics/navbar.toggle -->
+			</div>
+
+			<!-- #section:basics/navbar.dropdown -->
+			<div class="navbar-buttons navbar-header pull-right" role="navigation">
+				<ul class="nav ace-nav">
+					<!-- #section:basics/navbar.user_menu -->
+					<li class="light-blue">
+						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+							<img class="nav-user-photo" src="../assets/avatars/avatar33.png" alt="Thành's Photo" id="id_userphoto" runat="server" />
+							<span class="user-info" id="id_userinfo" runat="server">
+								<small>Welcome,</small>
+								Thành
+							</span>
+
+							<i class="ace-icon fa fa-caret-down"></i>
+						</a>
+
+						<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<%--<li id="id_page_systemconfig1" runat="server">
+								<a href="Settings.aspx">
+									<i class="ace-icon fa fa-cog"></i>
+									Cài đặt
+								</a>
+							</li>--%>
+
+							<li>
+								<a href="Profile.aspx">
+									<i class="ace-icon fa fa-user"></i>
+									Hồ sơ cá nhân
+								</a>
+							</li>
+
+							<li class="divider"></li>
+
+							<li>
+								<a href="Login.aspx?status=logout">
+									<i class="ace-icon fa fa-power-off"></i>
+									Đăng xuất
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<!-- /section:basics/navbar.user_menu -->
+				</ul>
+			</div>
+
+			<!-- /section:basics/navbar.dropdown -->
+		</div><!-- /.navbar-container -->
+	</div>
+
+	<!-- /section:basics/navbar.layout -->
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
+		    try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+		</script>
+
+		<!-- #section:basics/sidebar -->
+		<div id="sidebar" class="sidebar                  responsive">
+			<script type="text/javascript">
+			    try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+			</script>
+
+			<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+				<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+					<button class="btn btn-success" >
+						<i class="ace-icon fa fa-signal"></i>
+					</button>
+
+					<button class="btn btn-info" >
+						<i class="ace-icon fa fa-pencil"></i>
+					</button>
+
+					<!-- #section:basics/sidebar.layout.shortcuts -->
+					<button class="btn btn-warning" >
+						<i class="ace-icon fa fa-users"></i>
+					</button>
+
+					<button class="btn btn-danger" >
+						<i class="ace-icon fa fa-cogs"></i>
+					</button>
+
+					<!-- /section:basics/sidebar.layout.shortcuts -->
+				</div>
+
+				<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+					<span class="btn btn-success"></span>
+
+					<span class="btn btn-info"></span>
+
+					<span class="btn btn-warning"></span>
+
+					<span class="btn btn-danger"></span>
+				</div>
+			</div><!-- /.sidebar-shortcuts -->
+
+			<ul class="nav nav-list">
+				<li id="AccessControl_Dashboard" class="id_page_default" runat="server">
+					<a href="Default.aspx">
+						<i class="menu-icon fa fa-tachometer"></i>
+						<span class="menu-text"> Bàn làm việc </span>
+					</a>
+
+					<b class="arrow"></b>
+				</li>
+
+				<li id="AccessControl_Report" class="id_page_report" runat="server">
+					<a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-pie-chart"></i>
+						<span class="menu-text">
+							Báo cáo
+						</span>
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li id="AccessControl_Report_Report1" class="id_page_report1" runat="server">
+							<a href="Report1.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Sự kiện vào ra
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_Report_Report2" class="id_page_report2" runat="server">
+							<a href="Report2.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Sự kiện cảnh báo
+							</a>
+							<b class="arrow"></b>
+						</li>				
+
+					</ul>
+				</li>
+
+				<li id="AccessControl_Card" class="id_page_card" runat="server">
+					<a href="Card.aspx">
+						<i class="menu-icon fa fa-credit-card"></i>
+						<span class="menu-text"> Thẻ </span>
+					</a>
+
+					<b class="arrow"></b>
+				</li>
+
+                <li id="AccessControl_Customer" class="id_page_customer" runat="server">
+					<a href="Customer.aspx">
+						<i class="menu-icon fa fa-user"></i>
+						<span class="menu-text"> Khách hàng </span>
+					</a>
+
+					<b class="arrow"></b>
+				</li>
+
+                <li id="AccessControl_List" class="id_page_list" runat="server">
+					<a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-list"></i>
+						<span class="menu-text">
+							Danh mục
+						</span>
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+                        <li id="AccessControl_List_CardGroup" class="id_page_cardgroup" runat="server">
+							<a href="CardGroup.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Nhóm thẻ
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_List_CustomerGroup" class="id_page_customergroup" runat="server">
+							<a href="CustomerGroup.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Nhóm khách hàng
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_List_AccessLevel" class="id_page_customergroup" runat="server">
+							<a href="AccessLevel.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Phân quyền truy cập
+							</a>
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+
+                <li id="AccessControl_Device" class="id_page_device" runat="server">
+					<a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-desktop"></i>
+						<span class="menu-text">
+							Cài đặt thiết bị
+						</span>
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li id="AccessControl_Device_PC" class="id_page_pc" runat="server">
+							<a href="PC.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Máy tính
+							</a>
+							<b class="arrow"></b>
+						</li>
+						<li id="AccessControl_Device_Controller" class="id_page_controller" runat="server">
+							<a href="Controller.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Bộ điều khiển
+							</a>
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+
+                <li id="AccessControl_System" class="id_page_system" runat="server">
+					<a href="#" class="dropdown-toggle">
+						<i class="menu-icon fa fa-cog"></i>
+						<span class="menu-text">
+							Hệ thống
+						</span>
+						<b class="arrow fa fa-angle-down"></b>
+					</a>
+
+					<b class="arrow"></b>
+
+					<ul class="submenu">
+						<li id="AccessControl_System_User" class="id_page_user" runat="server">
+							<a href="User.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Người dùng
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_System_Role" class="id_page_role" runat="server">
+							<a href="Role.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Vai trò và quyền hạn
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_System_SystemConfig" class="id_page_systemconfig" runat="server">
+							<a href="SystemConfig.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Tham số hệ thống
+							</a>
+							<b class="arrow"></b>
+						</li>
+                        <li id="AccessControl_System_Log" class="id_page_log" runat="server">
+							<a href="Log.aspx">
+								<i class="menu-icon fa fa-caret-right"></i>
+								Nhật ký hệ thống
+							</a>
+							<b class="arrow"></b>
+						</li>
+					</ul>
+				</li>
+
+			</ul><!-- /.nav-list -->
+
+			<!-- #section:basics/sidebar.layout.minimize -->
+			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+				<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+			</div>
+
+			<!-- /section:basics/sidebar.layout.minimize -->
+			<script type="text/javascript">
+			    try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+			</script>
+		</div>
+
+		<!-- /section:basics/sidebar -->
+		<div class="main-content">
+			<div class="main-content-inner">
+				<!-- #section:basics/content.breadcrumbs -->
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+					    try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+					</script>
+
+                    <asp:ContentPlaceHolder id="Content_BreadCrumb" runat="server">
+        
+                    </asp:ContentPlaceHolder><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<div class="nav-search" id="nav-search2">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="Tìm kiếm ..." class="nav-search-input" id="nav-search-input2" autocomplete="off" />
+								<i class="ace-icon fa fa-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!-- /.nav-search -->
+
+					<!-- /section:basics/content.searchbox -->
+				</div>
+
+				<!-- /section:basics/content.breadcrumbs -->
+				<div class="page-content">
+					<!-- /section:settings.box -->
+					
+                    <asp:ContentPlaceHolder id="Content_PageHeader" runat="server">
+        
+                    </asp:ContentPlaceHolder><!-- /.page-header -->					
+
+					<div class="row">
+						<!-- PAGE CONTENT BEGINS -->
+						<asp:ContentPlaceHolder id="Content_PageContent" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+						<!-- PAGE CONTENT ENDS -->
+					</div><!-- /.row -->
+				</div><!-- /.page-content -->
+			</div>
+		</div><!-- /.main-content -->
+
+		<div class="footer">
+			<div class="footer-inner">
+				<!-- #section:basics/footer -->
+				<div class="footer-content">
+					<span class="bigger-120">
+						<span class="blue bolder">Kztek</span>
+						Application &copy; 2016
+					</span>
+
+					&nbsp; &nbsp;
+					<span class="action-buttons">
+						<a href="https://twitter.com/FutechVietnam" target="_blank">
+							<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+						</a>
+
+						<a href="https://www.facebook.com/kztek" target="_blank">
+							<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+						</a>
+
+						<a href="https://www.youtube.com/user/binvietnam" target="_blank">
+							<i class="ace-icon fa fa-youtube-square orange bigger-150"></i>
+						</a>
+					</span>
+				</div>
+
+				<!-- /section:basics/footer -->
+			</div>
+		</div>
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		</a>
+	</div><!-- /.main-container -->
+
+
+    <!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="../components/jquery/dist/jquery.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+    <script src="../components/jquery.1x/dist/jquery.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+	    if ('ontouchstart' in document.documentElement) document.write("<script src='../components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'>" + "<" + "/script>");
+	</script>
+	<script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<!-- page specific plugin scripts -->
+
+	<!--[if lte IE 8]>
+		<script src="../assets/js/excanvas.js"></script>
+	<![endif]-->
+    <script src="../components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
+	<script src="../components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
+	<script src="../components/chosen/chosen.jquery.js"></script>
+	<script src="../components/fuelux/js/spinbox.js"></script>
+	<script src="../components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+	<script src="../components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+	<script src="../components/moment/moment.js"></script>
+	<script src="../components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="../components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+	<script src="../components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+	<script src="../components/jquery-knob/js/jquery.knob.js"></script>
+	<script src="../components/autosize/dist/autosize.js"></script>
+	<script src="../components/jquery-inputlimiter/jquery.inputlimiter.js"></script>
+	<script src="../components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+	<script src="../components/_mod/bootstrap-tag/bootstrap-tag.js"></script>
+    <script src="../components/_mod/bootstrap-duallistbox/jquery.bootstrap-duallistbox.js"></script>
+	<script src="../components/raty/lib/jquery.raty.js"></script>
+	<script src="../components/_mod/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+	<script src="../components/select2/dist/js/select2.js"></script>
+	<script src="../components/typeahead.js/dist/typeahead.jquery.js"></script>
+    <script src="../components/jquery-colorbox/jquery.colorbox.js"></script>
+
+    <script src="../components/treegrid-flexible/js/jquery.treegrid.js"></script>
+
+	<!-- ace scripts -->
+    <script src="../assets/js/src/elements.scroller.js"></script>
+	<script src="../assets/js/src/elements.colorpicker.js"></script>
+	<script src="../assets/js/src/elements.fileinput.js"></script>
+	<script src="../assets/js/src/elements.typeahead.js"></script>
+	<script src="../assets/js/src/elements.wysiwyg.js"></script>
+	<script src="../assets/js/src/elements.spinner.js"></script>
+	<script src="../assets/js/src/elements.treeview.js"></script>
+	<script src="../assets/js/src/elements.wizard.js"></script>
+	<script src="../assets/js/src/elements.aside.js"></script>
+	<script src="../assets/js/src/ace.js"></script>
+	<script src="../assets/js/src/ace.basics.js"></script>
+	<script src="../assets/js/src/ace.scrolltop.js"></script>
+	<script src="../assets/js/src/ace.ajax-content.js"></script>
+	<script src="../assets/js/src/ace.touch-drag.js"></script>
+	<script src="../assets/js/src/ace.sidebar.js"></script>
+	<script src="../assets/js/src/ace.sidebar-scroll-1.js"></script>
+	<script src="../assets/js/src/ace.submenu-hover.js"></script>
+	<script src="../assets/js/src/ace.widget-box.js"></script>
+	<script src="../assets/js/src/ace.settings.js"></script>
+	<script src="../assets/js/src/ace.settings-rtl.js"></script>
+	<script src="../assets/js/src/ace.settings-skin.js"></script>
+	<script src="../assets/js/src/ace.widget-on-reload.js"></script>
+	<script src="../assets/js/src/ace.searchbox-autocomplete.js"></script>
+   
+    <script src="../assets/js/jquery.autosize.js"></script>
+
+    <%--Custome Futech--%>
+    <script src="../assets/js/custom.js"></script>
+
+	<!-- inline scripts related to this page -->
+	<script type="text/javascript">
+	    jQuery(function ($) {
+
+	        $('#nav-search-input2').on('keydown', function (e) {
+	            if (e.keyCode == 13) {
+	                e.preventDefault();
+	                var KeyWord = document.getElementById("nav-search-input2").value;
+	                if (KeyWord != '')
+	                    window.location.href = 'CardLib.aspx?KeyWord=' + KeyWord;
+	            }
+	        });
+
+
+	        var $overflow = '';
+	        var colorbox_params = {
+	            rel: 'colorbox',
+	            reposition: true,
+	            scalePhotos: true,
+	            scrolling: false,
+	            previous: '<i class="ace-icon fa fa-arrow-left"></i>',
+	            next: '<i class="ace-icon fa fa-arrow-right"></i>',
+	            close: '&times;',
+	            current: '{current} of {total}',
+	            maxWidth: '100%',
+	            maxHeight: '100%',
+	            onOpen: function () {
+	                $overflow = document.body.style.overflow;
+	                document.body.style.overflow = 'hidden';
+	            },
+	            onClosed: function () {
+	                document.body.style.overflow = $overflow;
+	            },
+	            onComplete: function () {
+	                $.colorbox.resize();
+	            }
+	        };
+
+	        $('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+	        $("#cboxLoadingGraphic").html("<i class='ace-icon fa fa-spinner orange fa-spin'></i>"); //let's add a custom loading icon
+
+	        $('.money').priceFormat({
+	            prefix: '',
+	            centsLimit: 0,
+	            centsSeparator: '.',
+	            thousandsSeparator: ','
+	        });
+
+	        //datepicker plugin
+	        //link
+	        $('.date-picker').datepicker({
+	            autoclose: true,
+	            todayHighlight: true
+	        })
+	        //show datepicker when clicking on the icon
+            .next().on(ace.click_event, function () {
+                $(this).prev().focus();
+            });
+
+	    });
+	</script>
+    
+
+</body>
+</html>
+
